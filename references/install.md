@@ -8,7 +8,7 @@ This bundle is intentionally credential-free. Copy or unzip it on the target com
 python3 scripts/check_prerequisites.py
 ```
 
-The preflight checks Python, Codex CLI, macOS Keychain access, and whether the local MCP names are already registered. It does not contact any mail or Feishu API.
+The preflight checks Python, Codex CLI, Node.js/pnpm, macOS Keychain access, and whether the local MCP names are already registered. It does not contact any mail or Feishu API. Node.js 20 or newer and pnpm are required by the local Feishu MCP.
 
 ## Configure services
 

@@ -11,7 +11,7 @@ import subprocess
 
 def main() -> int:
     print(f"platform: {platform.system()} {platform.machine()}")
-    for command in ("python3", "codex", "security"):
+    for command in ("python3", "codex", "security", "node", "pnpm"):
         print(f"{command}: {'ok' if shutil.which(command) else 'missing'}")
     print(f"imaplib: {'ok' if importlib.util.find_spec('imaplib') else 'missing'}")
     if shutil.which("codex"):

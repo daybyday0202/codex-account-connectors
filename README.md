@@ -16,7 +16,7 @@ python3 scripts/check_prerequisites.py
 
 Alternatively download a versioned ZIP from the repository's Releases page and run the same commands.
 
-Then follow `skill/references/install.md`.
+Then follow `references/install.md`.
 
 ## What this package does
 
