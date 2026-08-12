@@ -21,11 +21,13 @@ Then follow `skill/references/install.md`.
 ## What this package does
 
 - Documents Gmail account-level authentication through the Codex connector.
-- Documents remote HTTPS Feishu MCP with OAuth for cross-computer use.
+- Provides a local Feishu OAuth MCP setup matching the source Mac, including `offline_access` for automatic token refresh.
 - Provides a local read-only QQ Mail IMAP MCP and Keychain setup helper.
 - Never includes tokens, app secrets, passwords, or QQ authorization codes.
 
 ## Important
+
+Feishu is configured locally on each computer. Each Mac needs its own App ID/App Secret entry and OAuth consent; the App Secret is stored in macOS Keychain and the Lark MCP token/refresh token is stored locally. `offline_access` avoids repeated authorization when the short-lived access token expires. The optional remote Feishu design is documented separately, but is not the default.
 
 The Feishu remote server and QQ Mail cloud gateway are deployment choices, not files that can safely be copied with credentials. The templates contain placeholders only.
 

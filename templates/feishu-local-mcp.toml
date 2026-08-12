@@ -1,4 +1,5 @@
-# Development-only local mode. This is machine-scoped, not account-scoped.
+# Local stdio mode matching the source Mac. This is machine-scoped, not account-scoped.
+# Run scripts/feishu_setup.py to generate the wrapper and complete OAuth with offline_access.
 [mcp_servers.feishu]
-command = "/path/to/feishu-mcp"
+command = "~/.codex/bin/feishu-mcp"
 enabled = true

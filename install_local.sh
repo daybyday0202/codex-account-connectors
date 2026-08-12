@@ -17,5 +17,7 @@ fi
 printf '%s\n' "Installed skill: $SKILL_TARGET"
 printf '%s\n' "Local QQ Mail MCP: qqmail"
 printf '%s\n' "Configure QQ Mail with: python3 $BUNDLE_DIR/scripts/qqmail_setup.py your-address@qq.com"
+printf '%s\n' "Local Feishu MCP: feishu"
+printf '%s\n' "Configure Feishu with: python3 $BUNDLE_DIR/scripts/feishu_setup.py"
 printf '%s\n' "Gmail is configured through the Codex connector UI."
-printf '%s\n' "Feishu cross-computer use requires a deployed HTTPS OAuth MCP endpoint; see references/feishu-remote.md."
+printf '%s\n' "Feishu is configured locally on each computer; see references/feishu-local.md."

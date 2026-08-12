@@ -18,7 +18,13 @@ Gmail is an account-level Codex connector. In Codex Settings, open the connector
 
 ### Feishu
 
-For one Mac, a local MCP is enough. For cross-computer use, deploy an HTTPS Streamable HTTP MCP server with per-user Feishu OAuth. See `feishu-remote.md` and `templates/feishu-remote-mcp.toml`.
+This bundle uses a local MCP matching the source Mac. Run:
+
+```bash
+python3 scripts/feishu_setup.py
+```
+
+The setup asks for the Feishu App ID and App Secret, stores the App Secret in macOS Keychain, registers the local `feishu` MCP, and starts OAuth at `http://localhost:3333/callback`. Complete the Feishu consent page in the browser. The requested scope includes `offline_access`, so Lark MCP can refresh the short-lived user access token automatically. Each computer must complete this local authorization once; credentials are not copied between computers. Reauthorize only after revoking access, invalidating the refresh token, or adding scopes.
 
 ### QQ Mail
 

@@ -1,8 +1,8 @@
-# Remote Feishu OAuth MCP
+# Feishu OAuth MCP (optional remote alternative)
 
 ## Why remote
 
-A local Feishu MCP stores its OAuth token on one machine. A remote MCP exposes one HTTPS endpoint that every Codex client can use after OAuth login.
+A local Feishu MCP is the default in this bundle and matches the source Mac setup. A remote MCP is an optional alternative for teams that later want a shared HTTPS service.
 
 ## Server contract
 

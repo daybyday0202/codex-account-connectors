@@ -12,7 +12,7 @@ Use this skill to configure the three mail/document services consistently on a n
 ## Supported connection models
 
 - Gmail: account-level Codex connector. Sign into the same Codex/OpenAI account and authenticate Gmail when prompted.
-- Feishu: OAuth-backed MCP. The recommended account-level deployment is a remote HTTPS MCP server. A local Feishu MCP is machine-scoped and should only be used for development or a trusted single Mac.
+- Feishu: local stdio MCP with OAuth. The setup stores the App Secret in macOS Keychain, requests `offline_access`, and lets Lark MCP refresh the short-lived user access token locally. This is machine-scoped: every computer completes its own OAuth consent.
 - QQ Mail: local IMAP/SMTP MCP with the authorization code stored in macOS Keychain. To make it account-level, deploy the same server behind HTTPS and add OAuth/session storage; do not put the authorization code in a shared config file.
 
 ## Installation flow on a new computer
@@ -20,7 +20,7 @@ Use this skill to configure the three mail/document services consistently on a n
 1. Read `references/install.md` and ask which services the user wants.
 2. Run `scripts/check_prerequisites.py` for a read-only preflight.
 3. Configure Gmail through the Codex connector UI or its existing connector flow. Never ask for a Gmail password.
-4. For Feishu, prefer `templates/feishu-remote-mcp.toml` and follow `references/feishu-remote.md`. For local development, use `templates/feishu-local-mcp.toml` and re-authorize locally.
+4. For Feishu, run `python3 scripts/feishu_setup.py` and follow `references/feishu-local.md`. The optional remote design is documented in `references/feishu-remote.md`, but is not the default.
 5. For QQ Mail, run the local setup script described in `references/qqmail.md`; the script validates IMAP/SMTP before storing credentials in Keychain.
 6. Run `scripts/check_connectors.py` and report only account identifiers and connection status. Never print secrets.
 
