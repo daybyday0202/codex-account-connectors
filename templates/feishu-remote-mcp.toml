@@ -1,0 +1,6 @@
+# Sanitized example. Replace the URL with your deployed HTTPS MCP endpoint.
+[mcp_servers.feishu-cloud]
+url = "https://feishu-mcp.example.com/mcp"
+enabled = true
+startup_timeout_sec = 30
+tool_timeout_sec = 120

@@ -1,0 +1,16 @@
+__pycache__/
+*.py[cod]
+.DS_Store
+.env
+.env.*
+*.pem
+*.key
+*.token
+credentials*.json
+secrets*.json
+.codex/
+auth.json
+**/auth.json
+*.p12
+*.pfx
+*.mobileprovision

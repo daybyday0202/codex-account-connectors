@@ -1,0 +1,4 @@
+# Development-only local mode. This is machine-scoped, not account-scoped.
+[mcp_servers.feishu]
+command = "/path/to/feishu-mcp"
+enabled = true
